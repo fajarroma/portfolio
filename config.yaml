@@ -1,0 +1,54 @@
+baseURL: https://fajarroma.github.io
+title: Fajar Roma
+defaultContentLanguage: 'en'
+theme: eternityTakMod
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  subtitle: # todo: change default subtitle for your website.
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Fajar Roma
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        default: 3
+      mobile:
+        default: 2
+  socials:
+    # todo: add your social accounts.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'muhammadfjr150@gmail.com'
+      landing: true
+  homepage: "/selected-work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
+  specialPages:
+    - work
+    - archive
+  bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
+  plausible: '' # todo: set your plausible id.
+  disableRadius: false
+  moveIt: false # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+# todo: uncomment menu.main array after you create contents.
+menu:
+  main:
+    - name: Selected Work
+      url: /tags/selected-work/
+      weight: 1
+    - name: Tags
+      url: /tags/
+      weight: 2
